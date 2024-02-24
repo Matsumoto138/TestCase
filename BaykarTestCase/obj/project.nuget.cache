@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "LdE7dA5y1i6Z32d2lp22NIk7SKwzKiNCkhl90xFV3rHrfrqFqRNL9AqcIuCxKO2js2mQWYtr9WZs4k2btrNpag==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\demir\\Desktop\\Projeler\\Baykar Test Case\\BaykarTestCase\\BaykarTestCase\\BaykarTestCase.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\demir\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\microsoft.codecoverage\\17.7.1\\microsoft.codecoverage.17.7.1.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\microsoft.net.test.sdk\\17.7.1\\microsoft.net.test.sdk.17.7.1.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.7.1\\microsoft.testplatform.objectmodel.17.7.1.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\microsoft.testplatform.testhost\\17.7.1\\microsoft.testplatform.testhost.17.7.1.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\nuget.frameworks\\6.5.0\\nuget.frameworks.6.5.0.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\nunit.analyzers\\3.6.1\\nunit.analyzers.3.6.1.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\nunit3testadapter\\4.4.2\\nunit3testadapter.4.4.2.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\selenium.support\\4.18.1\\selenium.support.4.18.1.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\selenium.webdriver\\4.18.1\\selenium.webdriver.4.18.1.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\selenium.webdriver.chromedriver\\122.0.6261.5700\\selenium.webdriver.chromedriver.122.0.6261.5700.nupkg.sha512",
+    "C:\\Users\\demir\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
