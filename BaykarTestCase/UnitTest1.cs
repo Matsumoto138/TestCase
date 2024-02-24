@@ -106,25 +106,10 @@ namespace BaykarTestCase
                 openPositions.Click();
 
                 // Search Positions
-                IWebElement searchPosition = driver.FindElement(By.CssSelector("#myInput"));
-                searchPosition.SendKeys("Test");
+                Console.WriteLine(SearchPosition(driver));
                 Thread.Sleep(1000);
-
-                var positions = driver.FindElements(By.CssSelector(".position-head > a"));
-                var isSearchingTrue = false;
-                foreach (var position in positions)
-                {
-                    if(position.Text.Contains("Test"))
-                    {
-                        isSearchingTrue = true;
-                    }
-                    else
-                    {
-                        isSearchingTrue &= false;
-                        break;
-                    }
-                }
-                Console.WriteLine(isSearchingTrue);
+                // Check Filters
+                Console.WriteLine(ControlCheckbox(driver));
             }
 
             catch (Exception ex)
@@ -149,6 +134,45 @@ namespace BaykarTestCase
             }
         }
 
-        
+        private bool SearchPosition(IWebDriver driver)
+        {
+            IWebElement searchPosition = driver.FindElement(By.CssSelector("#myInput"));
+            searchPosition.SendKeys("Test");
+            Thread.Sleep(1000);
+
+            var positions = driver.FindElements(By.CssSelector(".position-head > a"));
+            
+            foreach (var position in positions)
+            {
+                if (!position.Text.Contains("Test"))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    
+        private bool ControlCheckbox(IWebDriver driver)
+        {
+            var checkboxes = driver.FindElements(By.CssSelector("#myUL2 input[type='checkbox']"));
+            
+            foreach (var checkbox in checkboxes)
+            {
+                checkbox.Click();
+                Thread.Sleep(500);
+                var teams = driver.FindElements(By.CssSelector(".position-category"));
+                foreach (var item in teams)
+                {
+                    if(item.Text != checkbox.GetAttribute("value"))
+                    {
+                        return false;
+                    }
+                    
+                }
+                Thread.Sleep(500);
+                checkbox.Click();
+            }
+            return true;
+        }
     }
 }
