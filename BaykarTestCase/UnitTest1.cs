@@ -98,6 +98,39 @@ namespace BaykarTestCase
         public void CarrierTest()
         {
             IWebDriver driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl("https://kariyer.baykartech.com/tr/");
+            try
+            {
+                IWebElement openPositions = driver.FindElement(By.CssSelector(".fix-btn"));
+                openPositions.Click();
+
+                // Search Positions
+                IWebElement searchPosition = driver.FindElement(By.CssSelector("#myInput"));
+                searchPosition.SendKeys("Test");
+                Thread.Sleep(1000);
+
+                var positions = driver.FindElements(By.CssSelector(".position-head > a"));
+                var isSearchingTrue = false;
+                foreach (var position in positions)
+                {
+                    if(position.Text.Contains("Test"))
+                    {
+                        isSearchingTrue = true;
+                    }
+                    else
+                    {
+                        isSearchingTrue &= false;
+                        break;
+                    }
+                }
+                Console.WriteLine(isSearchingTrue);
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
         }
 
         // Dropdown menünün görünürlüðünü kontrol eden yardýmcý bir metod
@@ -116,5 +149,6 @@ namespace BaykarTestCase
             }
         }
 
+        
     }
 }
